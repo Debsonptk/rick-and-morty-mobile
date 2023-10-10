@@ -1,5 +1,5 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { BaseScreen } from 'screens/BaseScreen';
+import { CharactersScreen } from 'screens/CharactersScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -10,7 +10,7 @@ const Routes: React.FC = () => {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="Base" component={BaseScreen} />
+      <Stack.Screen name="Characters" component={CharactersScreen} />
     </Stack.Navigator>
   );
 };

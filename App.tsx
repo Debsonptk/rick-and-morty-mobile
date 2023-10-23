@@ -11,6 +11,7 @@ const App: React.FC = () => {
   return (
     <NavigationContainer>
       <GluestackUIProvider config={config.theme}>
+        <StatusBar style="auto" />
         <CharactersProvider>
           <EpisodesProvider>
             <LocationsProvider>
@@ -18,7 +19,6 @@ const App: React.FC = () => {
             </LocationsProvider>
           </EpisodesProvider>
         </CharactersProvider>
-        <StatusBar style="auto" />
       </GluestackUIProvider>
     </NavigationContainer>
   );

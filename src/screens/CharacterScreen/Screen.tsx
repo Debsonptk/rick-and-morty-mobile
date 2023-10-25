@@ -7,7 +7,7 @@ import { RootStackParamsListType } from 'routes/index';
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type BaseCharacterType = NativeStackScreenProps<
   RootStackParamsListType,
-  'Characters'
+  'Character'
 >;
 
 const Screen: React.FC<BaseCharacterType> = () => {
@@ -23,7 +23,7 @@ const Screen: React.FC<BaseCharacterType> = () => {
       {isLoading && <Text>Loading...</Text>}
       {!isLoading && characters && (
         <View pt={10}>
-          <Text>Characters</Text>
+          <Text>Character</Text>
         </View>
       )}
     </View>

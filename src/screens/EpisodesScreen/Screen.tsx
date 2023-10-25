@@ -1,29 +1,29 @@
 import { useEffect } from 'react';
 import { Text, View } from '@gluestack-ui/themed';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useCharacters } from 'contexts/CharactersContext';
+import { useEpisodes } from 'contexts/EpisodesContext copy';
 import { RootStackParamsListType } from 'routes/index';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type BaseCharacterType = NativeStackScreenProps<
+type BaseEpisodeType = NativeStackScreenProps<
   RootStackParamsListType,
-  'Characters'
+  'Episodes'
 >;
 
-const Screen: React.FC<BaseCharacterType> = () => {
-  const { isLoading, characters, fetchCharacters } = useCharacters();
+const Screen: React.FC<BaseEpisodeType> = () => {
+  const { isLoading, episodes, fetchEpisodes } = useEpisodes();
 
   useEffect(() => {
-    fetchCharacters();
+    fetchEpisodes();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <View>
       {isLoading && <Text>Loading...</Text>}
-      {!isLoading && characters && (
+      {!isLoading && episodes && (
         <View pt={10}>
-          <Text>Characters</Text>
+          <Text>Episodes</Text>
         </View>
       )}
     </View>
